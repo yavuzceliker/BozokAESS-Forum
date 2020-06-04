@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Display</title>
+    <meta name="description" content="Here goes description" />
+    <meta name="author" content="author name" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- ======================================================================
+                                Mobile Specific Meta
+    ======================================================================= -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- ======================================================================
+                                Style CSS + Google Fonts
+    ======================================================================= -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="our-team-page">
+    <!-- =====================================================================
+                                     HEADER BAŞLANGIÇ
+    ====================================================================== -->
+    <div class="header" style="margin-top:-22px;">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.php">
+                        <img src="images/elements/logo.png" width="160" height="66" alt="logo" />
+                    </a>
+                </div>
+                <div class="menu">
+                <span class="res-menu">Menu</span>
+                    <ul>
+                        <li class="current_page_item"><a href="forum.php">Anasayfa<span>Main<br>Page</span></a></li>
+                        <li><a href="forum.php">Forumlar<span><br/>Forums</span></a></li>
+                        <li><a href="ekip.html">Ekibimiz<span>Our<br/>Team</span></a></li>
+                        <li><a href="projeler.html">Projelerimiz<span>Our<br/>Projects</span></a>
+                        	<ul class="children">
+                            	<li><a href="proje.html">Inception</a></li>
+                        	</ul>
+                        </li>
+                        <li><a href="contact.html">İletişim<span>Find<br/>Us</span></a></li>
+                        <li><?php
+								echo $_SESSION["kadi"]."<br>";
+								if(@$_POST["oturumkapa"]=="Oturumu Kapat")
+								{	
+									session_destroy();
+									header("location:giris.php");
+								}
+								if(!isset($_SESSION['kadi']))
+								{
+									header("location:giris.php");
+								}
+							?>
+							<input type="submit" name="oturumkapa" value="Oturumu Kapat"  style="width:150px; font-size: 10px;height:'30px;" >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- =====================================================================
+                                     END HEADER 
+    ====================================================================== -->
+
+
+    <!-- =====================================================================
+                                     START CONTENT
+    ====================================================================== -->
+    <div class="content">
+        <div class="container">
+            <div class="our-team">
+                <div class="row">
+                    <div class="span4">
+                        <div class="team-member">
+                            <div class="team-member-cover">
+                                <img src="images/team/member-2.jpg" alt="team member">
+                            </div>
+                            <div class="team-member-name">
+                                Yavuz ÇELİKER <span>Başkan</span>
+                            </div>
+                            <p>Ekibin idari işleriyle ilgilenmek.<br> Projelerin her safhasında var olmak.</p>
+                            <ul>
+                                <li><a href="#"><img src="images/socials/facebook-b.png" alt="social profile"></a></li>
+                                <li><a href="#"><img src="images/socials/twitter-b.png" alt="social profile"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="team-member">
+                            <div class="team-member-cover">
+                                <img src="images/team/member-3.jpg" alt="team member">
+                            </div>
+                            <div class="team-member-name">
+                                Emre GÜRBÜZ <span>AVİYONİK</span>
+                            </div>
+                            <p>Hava vasıtalarına yerleştirilecek olan payload kısmın gelişiminde liderlik yapmak.</p>
+                            <ul>
+                                <li><a href="#"><img src="images/socials/facebook-b.png" alt="social profile"></a></li>
+                                <li><a href="#"><img src="images/socials/twitter-b.png" alt="social profile"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="team-member">
+                            <div class="team-member-cover">
+                                <img src="images/team/member-1.jpg" alt="team member">
+                            </div>
+                            <div class="team-member-name">
+                                Eirhan Dikci <span>Yazılım</span>
+                            </div>
+                            <p>Ekibe ve projelerine yazılımsal destek sağlayıp altyapı oluşturmak.</p>
+                            <ul>
+                                <li><a href="#"><img src="images/socials/facebook-b.png" alt="social profile"></a></li>
+                                <li><a href="#"><img src="images/socials/twitter-b.png" alt="social profile"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span4">
+                        <div class="team-member">
+                            <div class="team-member-cover">
+                                <img src="images/team/member-4.jpg" alt="team member">
+                            </div>
+                            <div class="team-member-name">
+                                Muhammed Ceylan <span>ELEKTRONİK</span>
+                            </div>
+                            <p>Elektronk aksamlarının yapımında liderlik yapmak.<br>Aviyonik dizaynlara destek sağlamak</p>
+                            <ul>
+                                <li><a href="#"><img src="images/socials/facebook-b.png" alt="social profile"></a></li>
+                                <li><a href="#"><img src="images/socials/twitter-b.png" alt="social profile"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="team-member">
+                            <div class="team-member-cover">
+                                <img src="images/team/member-5.jpg" alt="team member">
+                            </div>
+                            <div class="team-member-name">
+                                Samet Nalçacıoğlu <span>Alan TESPİT</span>
+                            </div>
+                            <p>Yapılacak projeler için uygun koşul ve ortam araştırması yapmak.</p>
+                            <ul>
+                                <li><a href="#"><img src="images/socials/facebook-b.png" alt="social profile"></a></li>
+                                <li><a href="#"><img src="images/socials/twitter-b.png" alt="social profile"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="team-member">
+                            <div class="team-member-cover">
+                                <img src="images/team/member-6.jpg" alt="team member">
+                            </div>
+                            <div class="team-member-name">
+                                Fatih Karaalioğlu <span>UZAY TIBBI</span>
+                            </div>
+                            <p>Uzay Tıbbı hakkında araştırmalar ve projeler geliştirmek.<br>Risk içeren projelerde ilkyardım hizmeti vermek.</p>
+                            <ul>
+                                <li><a href="#"><img src="images/socials/facebook-b.png" alt="social profile"></a></li>
+                                <li><a href="#"><img src="images/socials/twitter-b.png" alt="social profile"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span4">
+                        <div class="team-member">
+                            <div class="team-member-cover">
+                                <img src="images/team/member-7.jpg" alt="team member">
+                            </div>
+                            <div class="team-member-name">
+                                Egemen Uğuz <span>Mekanik</span>
+                            </div>
+                            <p>Ekip projelerini önceden modelleyip, simüle etmek.</p>
+                            <ul>
+                                <li><a href="#"><img src="images/socials/facebook-b.png" alt="social profile"></a></li>
+                                <li><a href="#"><img src="images/socials/twitter-b.png" alt="social profile"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="team-member">
+                            <div class="team-member-cover">
+                                <img src="images/team/member-8.jpg" alt="team member">
+                            </div>
+                            <div class="team-member-name">
+                                Yasin Kızılaslan <span></span>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod incididunt ut labore et dolore magna aliqua. </p>
+                            <ul>
+                                <li><a href="#"><img src="images/socials/facebook-b.png" alt="social profile"></a></li>
+                                <li><a href="#"><img src="images/socials/twitter-b.png" alt="social profile"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="team-member">
+                            <div class="team-member-cover">
+                                <img src="images/team/member-10.jpg" alt="team member">
+                            </div>
+                            <div class="team-member-name">
+                                Tosbik <span>MASKOT</span>
+                            </div>
+                            <p>Senin varlığın yeter müdür.</p>
+                            <ul>
+                                <li><a href="#"><img src="images/socials/facebook-b.png" alt="social profile"></a></li>
+                                <li><a href="#"><img src="images/socials/twitter-b.png" alt="social profile"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- =====================================================================
+                                     END CONTENT
+    ====================================================================== -->
+
+
+    <!-- =====================================================================
+                                     START FOOTER
+    ====================================================================== -->
+     <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="span6">
+                    <div class="widget">
+                        <div class="subscription">
+                            <h3>Gelişmeleri takip etmek için <span>ABONE OLUN!</span></h3>
+                            <p>Masaüstü bildirimlerini açarak kulübümüzün yapmakta olduğu projeler hakkında bilgi edinebilirsiniz.</p>
+                            <form class="subscription-form" id="newsletter" method="post">
+                                <input type="text" name="email" placeholder="E-mail adresi" class="subscription-line">
+                                <input type="submit" value="Takip Et" class="subscription-button">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <ul class="socials">
+                            <li><a href="#"><img src="images/socials/facebook.png" width="20" height="20" alt="Facebook share" /></a></li>
+                            <li><a href="#"><img src="images/socials/twitter.png" width="20" height="20" alt="Twitter share" /></a></li>
+                            <li><a href="#"><img src="images/socials/linkedin.png" width="20" height="20" alt="Linkedin connection" /></a></li>
+                            <li><a href="#"><img src="images/socials/dribble.png" width="20" height="20" alt="Dribble portfolio" /></a></li>
+                            <li><a href="#"><img src="images/socials/rss.png" width="20" height="20" alt="Rss Subscription" /></a></li>
+                            <li><a href="#"><img src="images/socials/pinterest.png" width="20" height="20" alt="Pinterest pin" /></a></li>
+                            <li><a href="#"><img src="images/socials/googleplus.png" width="20" height="20" alt="Google plus share" /></a></li>
+                            <li><a href="#"><img src="images/socials/youtube.png" width="20" height="20" alt="Youtube page" /></a></li>
+                            <li><a href="#"><img src="images/socials/behance.png" width="20" height="20" alt="Behance page" /></a></li>
+                            <li><a href="#"><img src="images/socials/flickr.png" width="20" height="20" alt="Flickr page" /></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="widget">
+                    <h3><span>menu</span></h3>
+                        <ul class="footer-menu">
+                        	<li><a href="forum.php">- Anasayfa</a></li>
+                       	 	<li><a href="forum.php">- Forumlar</a></li>
+                        	<li><a href="ekip.html">- Ekibimiz</a></li>
+                        	<li><a href="projeler.html">- Projelerimiz</a></li>
+                        	<li><a href="contact.html">- İletişim</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="widget">
+                        <h3>Son <span>Tweetler</span></h3>
+                        <ul class="twitter_widget" data-user="ieeebozok_aess" data-posts="4">
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- =====================================================================
+                                     END FOOTER
+    ====================================================================== -->
+
+
+    <!-- ======================================================================
+                                    START SCRIPTS
+    ======================================================================= -->
+    <script src="js/modernizr.custom.63321.js" type="text/javascript"></script>
+    <script src="js/jquery-1.10.0.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
+    <script src="js/placeholder.js" type="text/javascript"></script>
+    <script src="js/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+    <script src="js/masonry.pkgd.min.js" type="text/javascript"></script>
+    <script src="js/jquery.swipebox.min.js" type="text/javascript"></script>
+    <script src="js/farbtastic/farbtastic.js" type="text/javascript"></script>
+    <script src="js/options.js" type="text/javascript"></script>
+    <script src="js/plugins.js" type="text/javascript"></script>
+    <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- ======================================================================
+                                    END SCRIPTS
+    ======================================================================= -->
+</body>
+
+</html>
